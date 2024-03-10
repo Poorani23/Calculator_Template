@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        /* *{
+            margin: 0;
+            border: 0;
+        } */
+        h1{
+            text-align: center;
+        }
+        .container{
+            position:fixed;
+            background-color: black;
+            border-radius: 10%;
+            left: 30%;
+            right: 30%;
+            top: 20%;
+            bottom: 5%;
+            color: white;
+        } 
+        /* .One{
+        background-color: green;
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+       }
+       .Two{
+        background-color: red;
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+       }
+       .Three{
+        background-color: yellow;
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+       } */
+       .typing{
+        position: absolute; 
+        background-color: rgb(238, 238, 238);
+        left: 10%;
+        right: 10%;
+        top: 7%;
+        bottom: 80%;
+       }
+       .div1{
+        padding: 20px;
+       }
+       .One{
+        background-color: rgb(15, 238, 201);
+        width: 60px;
+        height: 60px;
+        float: left;
+        margin-top: 150px;
+        margin-left: 50px;
+        margin-right: 25px;
+        color: black;
+        /* align-items: center; */
+        border-radius: 10px;
+       }
+       .Two{
+        background-color: rgb(196, 243, 7);
+        width: 60px;
+        height: 60px;
+        float: left;
+        margin-top: 150px;
+        margin-left: 50px;
+        margin-right: 25px;
+        color: black;
+        text-align: center;
+        border-radius: 10px;
+       }
+       .Three{
+        background-color: rgb(163, 220, 6);
+        width: 60px;
+        height: 60px;
+        float: left;
+        margin-top: 150px;
+        margin-left: 50px;
+        margin-right: 25px;
+        color: black;
+        text-align: center;
+        border-radius: 10px;
+       }
+       .Four{
+        background-color: rgb(103, 21, 179);
+        width: 60px;
+        height: 60px;
+        float: left;
+        margin-top: 150px;
+        margin-left: 50px;
+        margin-right: 25px;
+        color: black;
+        text-align: center;
+        border-radius: 10px;
+       }
+       .div2{
+        padding: 20px;
+       }
+       .Five{
+        background-color: rgb(227, 11, 169);
+        width: 60px;
+        height: 60px;
+        float: left;
+        margin-top: 50px;
+        margin-left: 50px;
+        margin-right: 25px;
+        color: black;
+        text-align: center;
+        border-radius: 10px;
+       }
+       .Six{
+        background-color: white;
+        width: 60px;
+        height: 60px;
+        float: left;
+        margin-top: 50px;
+        margin-left: 50px;
+        margin-right: 25px; 
+        color: black;
+        text-align: center;
+        border-radius: 10px;
+       }
+       .Seven{
+        background-color: rgb(163, 16, 16);
+        width: 60px;
+        height: 60px;
+        float: left;
+        margin-top: 50px;
+        margin-left: 50px;
+        margin-right: 25px;
+        color: black;
+        text-align: center;
+        border-radius: 10px;
+       }
+       .Eight{
+        background-color: rgb(5, 176, 8);
+        width: 60px;
+        height: 60px;
+        float: left;
+        margin-top: 50px;
+        margin-left: 50px;
+        margin-right: 25px;
+        color: black;
+        text-align: center;
+        border-radius: 10px;
+       }
+       .div3{
+        padding: 20px;
+       }
+       .Nine{
+        background-color: rgb(100, 9, 236);
+        width: 60px;
+        height: 60px;
+        float: left;
+        margin-top: 50px;
+        margin-left: 50px;
+        margin-right: 25px;
+        color: black;
+        text-align: center;
+        border-radius: 10px;
+       }
+       .Zero{
+        background-color: rgb(18, 153, 202);
+        width: 60px;
+        height: 60px;
+        float: left;
+        margin-top: 50px;
+        margin-left: 50px;
+        margin-right: 25px;
+        color: black;
+        text-align: center;
+        border-radius: 10px;
+        
+       } 
+       .Add{
+        background-color: brown;
+        width: 60px;
+        height: 60px;
+        float: left;
+        margin-top: 50px;
+        margin-left: 50px;
+        margin-right: 25px;
+        color: black;
+        /* text-align:justify; */
+        border-radius: 10px;
+       }
+       .Sub{
+        background-color: chartreuse;
+        width: 60px;
+        height: 60px;
+        float: left;
+        margin-top: 50px;
+        margin-left: 50px;
+        margin-right: 25px;
+        color: black;
+        text-align: center;
+        border-radius: 10px;
+       }
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <div class="container">
+         <div class="typing"></div> 
+         <div class="div1">
+            <div class="One"><h1>1</h1></div>
+            <div class="Two"><h1>2</h1></div>
+            <div class="Three"><h1>3</h1></div>
+            <div class="Four"><h1>4</h1></div>
+        </div> 
+        <div class="div2">
+            <div class="Five"><h1>5</h1></div>
+            <div class="Six"><h1>6</h1></div>
+            <div class="Seven"><h1>7</h1></div>
+            <div class="Eight"><h1>8</h1></div>
+        </div>
+        <div class="div3">
+            <div class="Nine"><h1>9</h1></div>
+            <div class="Zero"><h1>0</h1></div>
+            <div class="Add"><h1>+</h1></div>
+            <div class="Sub"><h1>-</h1></div>
+        </div>
+    </div>
+</body>
+</html>
+ <!-- <table>
+            <tr>
+                <td>1</td> <td>2</td> <td>3</td><td>4</td>
+            </tr>
+            <tr>
+                <td>5</td> <td>6</td> <td>7</td><td>8</td>
+            </tr>
+            <tr>
+                <td>1</td> <td>2</td> <td>3</td><td>4</td>
+            </tr>
+            <tr>
+                <td>1</td> <td>2</td> <td>3</td><td>4</td>
+            </tr>
+            <tr>
+                <td>1</td> <td>2</td> <td>3</td><td>4</td>
+            </tr>
+            </table> -->
+<!-- <div class="div1">
+            <div class="One"></div>
+            <div class="Two"></div>
+            <div class="Three"></div>
+            <div class="Four"></div>
+        </div>
+        <div class="div2">
+            <div class="Five"></div>
+            <div class="Six"></div>
+            <div class="Seven"></div>
+            <div class="Eight"></div>
+        </div>
+        <div class="div3">
+            <div class="Nine"></div>
+            <div class="Zero"></div>
+            <div class="Add"></div>
+            <div class="Sub"></div>
+        </div> -->
